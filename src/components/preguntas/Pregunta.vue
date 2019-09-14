@@ -55,6 +55,8 @@ export default {
     pregunta: String,
     /**
      * Las opciones de respuesta. Necesitan un formato especial.
+     * `opciones[x].texto` {string} El texto de la opción de respuesta.
+     * `opciones[x].correcta` {boolean} Si la opción de respuesta es correcta o no.
      * @param opciones.texto {string} El texto de la opción de respuesta.
      * @param opciones.correcta {boolean} Si la opción de respuesta es correcta o no.
      */
@@ -131,6 +133,23 @@ export default {
             if(this.id == id_padre_opcion){
                 this.opcion_seleccionada = indice;
             }   
+        });
+        /**
+         * Evento para limpiar el estado de la pregunta, conserva 
+         * el texto de la pregunta y sus opciones de respuesta.
+         * Acepta un array con el id de esta pregunta o el id de esta pregunta
+         * 
+         */
+        this.$root.$on('pregunta_reiniciar', (id) => {
+            let reiniciar = false;
+            if(Object.prototype.toString.call(id) == "[object Array]"){
+                reiniciar = id.indexOf(this.id) > -1;
+            } else {
+                reiniciar = id == this.id;
+            }
+            if(reiniciar){
+                this.pregunta_fue_respondida = false;
+            }
         });
     }
 }

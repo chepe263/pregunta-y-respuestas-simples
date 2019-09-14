@@ -16,6 +16,10 @@
         Pregunta 2
       </template>
     </pregunta>
+
+    <button type="button" @click="reiniciar_pregunta('p20')">
+      Reiniciar palabras utilizadas
+    </button>
   </div>
 </template>
 
@@ -34,6 +38,9 @@ export default {
       } else {
         this.incorrectas++;
       }
+    },
+    reiniciar_pregunta: function(pregunta_id){
+      this.$root.$emit('pregunta_reiniciar', pregunta_id);
     },
     siguiente: function(pregunta_id, result){
       console.log("siguiente iteracion?", result)

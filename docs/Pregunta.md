@@ -30,7 +30,9 @@ Depende del prop `fondo`
 
 - `opciones` ***Array*** (*required*) 
 
-  Las opciones de respuesta. Necesitan un formato especial. 
+  Las opciones de respuesta. Necesitan un formato especial.
+  `opciones[x].texto` {string} El texto de la opción de respuesta.
+  `opciones[x].correcta` {boolean} Si la opción de respuesta es correcta o no. 
 
 - `id` ***String*** (*optional*) 
 

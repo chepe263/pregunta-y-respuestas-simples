@@ -124,6 +124,23 @@ export default {
                 this.padre_pregunta_fue_respondida = true;
             }   
         });
+        /**
+         * Evento para limpiar el estado de la pregunta, conserva 
+         * el texto de la pregunta y sus opciones de respuesta.
+         * Acepta un array con el id de esta pregunta o el id de esta pregunta
+         * 
+         */
+        this.$root.$on('pregunta_reiniciar', (id) => {
+            let reiniciar = false;
+            if(Object.prototype.toString.call(id) == "[object Array]"){
+                reiniciar = id.indexOf(this.padre_id) > -1;
+            } else {
+                reiniciar = id == this.padre_id;
+            }
+            if(reiniciar){
+                this.padre_pregunta_fue_respondida = false;
+            }
+        });
     }
 }
 
