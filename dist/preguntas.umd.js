@@ -517,20 +517,19 @@ var staticRenderFns = []
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.to-string.js
 var es6_regexp_to_string = __webpack_require__("6b54");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2258c207-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=5e0096c9&
-var PreguntaRespuestaOpcionvue_type_template_id_5e0096c9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta-respuesta-opcion"},[(_vm.fondo == true)?_c('div',{staticClass:"pregunta-respuesta-opcion-fondo"}):_vm._e(),_c('label',{staticClass:"pregunta-respuesta-opcion-texto",class:{
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2258c207-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=94337490&
+var PreguntaRespuestaOpcionvue_type_template_id_94337490_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta-respuesta-opcion"},[(_vm.fondo == true)?_c('div',{staticClass:"pregunta-respuesta-opcion-fondo"}):_vm._e(),_c('label',{staticClass:"pregunta-respuesta-opcion-texto",class:{
             'opcion-seleccionada': _vm.seleccionado,
             'opcion-correcta': _vm.padre_pregunta_fue_respondida && _vm.correcto,
             'opcion-incorrecta': _vm.padre_pregunta_fue_respondida && !_vm.correcto && _vm.seleccionado,
-            },on:{"click":_vm.opcion_seleccionada}},[_vm._v("\n        "+_vm._s(_vm.indice)+"\n        "),_c('input',{attrs:{"type":"radio","name":("opcion_respuesta[" + _vm.padre_id + "][]"),"disabled":_vm.padre_pregunta_fue_respondida}}),_vm._t("default",[_vm._v("\n            "+_vm._s(_vm.texto)+"\n        ")])],2),(_vm.usar_flecha_seleccion && _vm.seleccionado)?_vm._t("flecha-seleccion"):_vm._e()],2)}
-var PreguntaRespuestaOpcionvue_type_template_id_5e0096c9_staticRenderFns = []
+            },on:{"click":_vm.opcion_seleccionada}},[_c('input',{attrs:{"type":"radio","name":("opcion_respuesta[" + _vm.padre_id + "][]"),"disabled":_vm.padre_pregunta_fue_respondida}}),_vm._t("default",[_vm._v("\n            "+_vm._s(_vm.texto)+"\n        ")])],2),(_vm.usar_flecha_seleccion && _vm.seleccionado)?_vm._t("flecha-seleccion"):_vm._e()],2)}
+var PreguntaRespuestaOpcionvue_type_template_id_94337490_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=5e0096c9&
+// CONCATENATED MODULE: ./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=94337490&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=script&lang=js&
 
-//
 //
 //
 //
@@ -795,8 +794,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   preguntas_PreguntaRespuestaOpcionvue_type_script_lang_js_,
-  PreguntaRespuestaOpcionvue_type_template_id_5e0096c9_render,
-  PreguntaRespuestaOpcionvue_type_template_id_5e0096c9_staticRenderFns,
+  PreguntaRespuestaOpcionvue_type_template_id_94337490_render,
+  PreguntaRespuestaOpcionvue_type_template_id_94337490_staticRenderFns,
   false,
   null,
   null,

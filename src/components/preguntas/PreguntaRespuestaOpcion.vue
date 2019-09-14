@@ -13,7 +13,6 @@
                 }"
             @click="opcion_seleccionada"
             >
-            {{ indice }}
             <input type="radio" :name="`opcion_respuesta[${padre_id}][]`"  :disabled="padre_pregunta_fue_respondida" />
             <slot>
                 {{ texto }}
