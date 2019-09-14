@@ -10,7 +10,7 @@
         :padre_id="id"
         :indice="index" 
         :texto="item.texto" 
-        :fondo="false" 
+        :fondo="opciones_respuesta_tienen_fondo" 
         :correcto="item.correcta" 
         
         />
@@ -63,7 +63,10 @@ export default {
     opciones: {
         type: Array,
         required: true
-        },
+    },
+    /** Mostrar el div para fondo de opciones de respuesta */
+    opciones_respuesta_tienen_fondo: false,
+
     /** 
      * El nombre o id de la pregunta. Ayuda a identificar la opcion seleccionada con su pregunta padre. Obligatorio.
      */

@@ -34,6 +34,10 @@ Depende del prop `fondo`
   `opciones[x].texto` {string} El texto de la opción de respuesta.
   `opciones[x].correcta` {boolean} Si la opción de respuesta es correcta o no. 
 
+- `opciones_respuesta_tienen_fondo` ***any*** (*optional*) 
+
+  Mostrar el div para fondo de opciones de respuesta 
+
 - `id` ***String*** (*optional*) 
 
   El nombre o id de la pregunta. Ayuda a identificar la opcion seleccionada con su pregunta padre. Obligatorio. 
