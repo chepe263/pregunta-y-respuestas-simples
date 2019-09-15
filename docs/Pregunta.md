@@ -13,12 +13,15 @@ Componente que representa una pregunta
 Depende del prop `fondo`
 -   `.pregunta-respuesta-opcion-texto` Etiqueta `<label>` que contiene el texto de la opcion de respuesta.
 -  `.opcion-seleccionada` Clase para la opcion seleccionada
+-  `.opcion-seleccionada-flecha` Clase para la flecha abajo de la opcion seleccionada.
 -  `.opcion-correcta` Clase para la opcion correcta
 -  `.opcion-incorrecta` Clase para la opcion incorrecta 
 
 ## slots 
 
 - `titulo` Usar el slot #titulo para mostrar el texto de la pregunta.. 
+
+- `contenido-flecha` Slot para mostrar una flecha abajo de la opcion seleccionada 
 
 - `boton_responder` Usar el slot #boton_responder para mostrar un boton que llama a la funcion de responder la pregunta. 
 
@@ -46,6 +49,10 @@ Depende del prop `fondo`
 
   Una funcion que se llama cuando se hizo clic en el botón de responder.
   La idea es usarla para llamar a otra pregunta o esconder la actual. 
+
+- `usar_flecha_seleccion` ***any*** (*optional*) 
+
+  Mostrar `.opcion-seleccionada-flecha` de las opciones de respuesta. 
 
 ## data 
 

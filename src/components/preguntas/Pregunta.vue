@@ -11,9 +11,15 @@
         :indice="index" 
         :texto="item.texto" 
         :fondo="opciones_respuesta_tienen_fondo" 
-        :correcto="item.correcta" 
-        
-        />
+        :correcto="item.correcta"         
+        usar_flecha_seleccion="usar_flecha_seleccion"         
+        >
+			<template slot="flecha-seleccion">
+				<!-- Slot para mostrar una flecha abajo de la opcion seleccionada -->
+				<slot name="contenido-flecha">
+				</slot>
+			</template>
+		</pregunta-respuesta-opcion>
         <div @click="responder_pregunta" v-if="mostrar_boton_responder" class="cont-boton-responder">
             <!-- Usar el slot #boton_responder para mostrar un boton que llama a la funcion de responder la pregunta. -->
             <slot name="boton_responder">
@@ -28,6 +34,7 @@
 <script>
 import PreguntaRespuestaOpcion from './PreguntaRespuestaOpcion.vue';
 /**
+ * 
  * Componente que representa una pregunta 
  *  ### Clases CSS disponbles
  * 
@@ -41,6 +48,7 @@ import PreguntaRespuestaOpcion from './PreguntaRespuestaOpcion.vue';
  *          Depende del prop `fondo`
  *      -   `.pregunta-respuesta-opcion-texto` Etiqueta `<label>` que contiene el texto de la opcion de respuesta.
  *  -  `.opcion-seleccionada` Clase para la opcion seleccionada
+ *  -  `.opcion-seleccionada-flecha` Clase para la flecha abajo de la opcion seleccionada.
  *  -  `.opcion-correcta` Clase para la opcion correcta
  *  -  `.opcion-incorrecta` Clase para la opcion incorrecta
  */
@@ -76,6 +84,10 @@ export default {
      * La idea es usarla para llamar a otra pregunta o esconder la actual.
      */
     finalizar_pregunta: Function,
+	/**
+	 * Mostrar `.opcion-seleccionada-flecha` de las opciones de respuesta.
+	 */
+    usar_flecha_seleccion: false,
   },
   data() {
       return {

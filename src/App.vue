@@ -9,6 +9,9 @@
       <template #titulo>
         Pregunta 1
       </template>
+      <template #contenido-flecha>
+        desde otra pregunta :)
+      </template>
     </pregunta>
 
     <pregunta id="dlsld" :opciones="opciones_de_respuesta2" @resultado_pregunta="resultado">

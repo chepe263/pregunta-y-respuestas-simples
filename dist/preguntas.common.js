@@ -498,29 +498,33 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2258c207-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/Pregunta.vue?vue&type=template&id=39899dbc&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta",attrs:{"data-total-opciones":_vm.opciones.length}},[_c('div',{staticClass:"pregunta-titulo"},[_vm._t("titulo",[_vm._v("\n          "+_vm._s(_vm.pregunta)+"\n      ")])],2),_vm._l((_vm.opciones),function(item,index){return _c('pregunta-respuesta-opcion',{attrs:{"padre_id":_vm.id,"indice":index,"texto":item.texto,"fondo":_vm.opciones_respuesta_tienen_fondo,"correcto":item.correcta}})}),(_vm.mostrar_boton_responder)?_c('div',{staticClass:"cont-boton-responder",on:{"click":_vm.responder_pregunta}},[_vm._t("boton_responder",[_c('button',{attrs:{"type":"button"}},[_vm._v("\n                  Contestar\n              ")])])],2):_vm._e()],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2258c207-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/Pregunta.vue?vue&type=template&id=ca21b260&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta",attrs:{"data-total-opciones":_vm.opciones.length}},[_c('div',{staticClass:"pregunta-titulo"},[_vm._t("titulo",[_vm._v("\n            "+_vm._s(_vm.pregunta)+"\n        ")])],2),_vm._l((_vm.opciones),function(item,index){return _c('pregunta-respuesta-opcion',{attrs:{"padre_id":_vm.id,"indice":index,"texto":item.texto,"fondo":_vm.opciones_respuesta_tienen_fondo,"correcto":item.correcta,"usar_flecha_seleccion":"usar_flecha_seleccion"}},[_c('template',{slot:"flecha-seleccion"},[_vm._t("contenido-flecha")],2)],2)}),(_vm.mostrar_boton_responder)?_c('div',{staticClass:"cont-boton-responder",on:{"click":_vm.responder_pregunta}},[_vm._t("boton_responder",[_c('button',{attrs:{"type":"button"}},[_vm._v("\n                    Contestar\n                ")])])],2):_vm._e()],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue?vue&type=template&id=39899dbc&scoped=true&
+// CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue?vue&type=template&id=ca21b260&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.to-string.js
 var es6_regexp_to_string = __webpack_require__("6b54");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2258c207-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=94337490&
-var PreguntaRespuestaOpcionvue_type_template_id_94337490_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta-respuesta-opcion"},[(_vm.fondo == true)?_c('div',{staticClass:"pregunta-respuesta-opcion-fondo"}):_vm._e(),_c('label',{staticClass:"pregunta-respuesta-opcion-texto",class:{
-            'opcion-seleccionada': _vm.seleccionado,
-            'opcion-correcta': _vm.padre_pregunta_fue_respondida && _vm.correcto,
-            'opcion-incorrecta': _vm.padre_pregunta_fue_respondida && !_vm.correcto && _vm.seleccionado,
-            },on:{"click":_vm.opcion_seleccionada}},[_c('input',{attrs:{"type":"radio","name":("opcion_respuesta[" + _vm.padre_id + "][]"),"disabled":_vm.padre_pregunta_fue_respondida}}),_vm._t("default",[_vm._v("\n            "+_vm._s(_vm.texto)+"\n        ")])],2),(_vm.usar_flecha_seleccion && _vm.seleccionado)?_vm._t("flecha-seleccion"):_vm._e()],2)}
-var PreguntaRespuestaOpcionvue_type_template_id_94337490_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2258c207-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=6b95b933&
+var PreguntaRespuestaOpcionvue_type_template_id_6b95b933_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta-respuesta-opcion",class:{
+                'opcion-seleccionada': _vm.seleccionado,
+                'opcion-correcta': _vm.padre_pregunta_fue_respondida && _vm.correcto,
+                'opcion-incorrecta': _vm.padre_pregunta_fue_respondida && !_vm.correcto && _vm.seleccionado,
+                },on:{"click":_vm.opcion_seleccionada}},[(_vm.fondo == true)?_c('div',{staticClass:"pregunta-respuesta-opcion-fondo"}):_vm._e(),_c('label',{staticClass:"pregunta-respuesta-opcion-texto"},[_c('input',{attrs:{"type":"radio","name":("opcion_respuesta[" + _vm.padre_id + "][]"),"disabled":_vm.padre_pregunta_fue_respondida,"selected":_vm.seleccionado}}),_vm._t("default",[_vm._v("\n                "+_vm._s(_vm.texto)+"\n            ")])],2),(_vm.usar_flecha_seleccion && _vm.seleccionado)?_c('div',{staticClass:"opcion-seleccionada-flecha"},[_vm._t("flecha-seleccion")],2):_vm._e()])}
+var PreguntaRespuestaOpcionvue_type_template_id_6b95b933_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=94337490&
+// CONCATENATED MODULE: ./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=6b95b933&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=script&lang=js&
 
+//
+//
+//
+//
 //
 //
 //
@@ -670,6 +674,8 @@ var PreguntaRespuestaOpcionvue_type_template_id_94337490_staticRenderFns = []
 
       if (reiniciar) {
         _this.padre_pregunta_fue_respondida = false;
+        _this.correcta = false;
+        _this.seleccionado = false;
       }
     });
   }
@@ -785,8 +791,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   preguntas_PreguntaRespuestaOpcionvue_type_script_lang_js_,
-  PreguntaRespuestaOpcionvue_type_template_id_94337490_render,
-  PreguntaRespuestaOpcionvue_type_template_id_94337490_staticRenderFns,
+  PreguntaRespuestaOpcionvue_type_template_id_6b95b933_render,
+  PreguntaRespuestaOpcionvue_type_template_id_6b95b933_staticRenderFns,
   false,
   null,
   null,
@@ -824,8 +830,15 @@ var component = normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /**
+ * 
  * Componente que representa una pregunta 
  *  ### Clases CSS disponbles
  * 
@@ -839,6 +852,7 @@ var component = normalizeComponent(
  *          Depende del prop `fondo`
  *      -   `.pregunta-respuesta-opcion-texto` Etiqueta `<label>` que contiene el texto de la opcion de respuesta.
  *  -  `.opcion-seleccionada` Clase para la opcion seleccionada
+ *  -  `.opcion-seleccionada-flecha` Clase para la flecha abajo de la opcion seleccionada.
  *  -  `.opcion-correcta` Clase para la opcion correcta
  *  -  `.opcion-incorrecta` Clase para la opcion incorrecta
  */
@@ -879,7 +893,9 @@ var component = normalizeComponent(
      * Una funcion que se llama cuando se hizo clic en el botón de responder.
      * La idea es usarla para llamar a otra pregunta o esconder la actual.
      */
-    finalizar_pregunta: Function
+    finalizar_pregunta: Function,
+    usar_flecha_seleccion: false,
+    html_flecha: null
   },
   data: function data() {
     return {
@@ -988,7 +1004,7 @@ var Pregunta_component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "39899dbc",
+  "ca21b260",
   null
   
 )

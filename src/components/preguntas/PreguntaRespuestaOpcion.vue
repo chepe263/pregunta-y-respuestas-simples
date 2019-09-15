@@ -3,24 +3,28 @@
         
 
         -->
-    <div class="pregunta-respuesta-opcion">
-        <div class="pregunta-respuesta-opcion-fondo" v-if="fondo == true"></div>
-        <label class="pregunta-respuesta-opcion-texto" 
-            :class="{
+    <div class="pregunta-respuesta-opcion" 
+		@click="opcion_seleccionada"
+		:class="{
                 'opcion-seleccionada': seleccionado,
                 'opcion-correcta': padre_pregunta_fue_respondida && correcto,
                 'opcion-incorrecta': padre_pregunta_fue_respondida && !correcto && seleccionado,
                 }"
-            @click="opcion_seleccionada"
+		>
+        <div class="pregunta-respuesta-opcion-fondo" v-if="fondo == true"></div>
+        <label class="pregunta-respuesta-opcion-texto" 
+            
+            
             >
-            <input type="radio" :name="`opcion_respuesta[${padre_id}][]`"  :disabled="padre_pregunta_fue_respondida" />
+            <input type="radio" :name="`opcion_respuesta[${padre_id}][]`"  :disabled="padre_pregunta_fue_respondida" :selected="seleccionado" />
             <slot>
                 {{ texto }}
             </slot>
         </label>
-        <slot name="flecha-seleccion" v-if="usar_flecha_seleccion && seleccionado">
-            
-        </slot>
+		<div v-if="usar_flecha_seleccion && seleccionado" class="opcion-seleccionada-flecha">
+			<slot name="flecha-seleccion" >
+			</slot>
+		</div>
     </div>
 </template>
 <style>
@@ -138,6 +142,8 @@ export default {
             }
             if(reiniciar){
                 this.padre_pregunta_fue_respondida = false;
+                this.correcta = false;
+                this.seleccionado = false;
             }
         });
     }
