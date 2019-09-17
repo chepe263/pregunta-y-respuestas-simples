@@ -498,17 +498,17 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2258c207-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/Pregunta.vue?vue&type=template&id=ca21b260&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta",attrs:{"data-total-opciones":_vm.opciones.length}},[_c('div',{staticClass:"pregunta-titulo"},[_vm._t("titulo",[_vm._v("\n            "+_vm._s(_vm.pregunta)+"\n        ")])],2),_vm._l((_vm.opciones),function(item,index){return _c('pregunta-respuesta-opcion',{attrs:{"padre_id":_vm.id,"indice":index,"texto":item.texto,"fondo":_vm.opciones_respuesta_tienen_fondo,"correcto":item.correcta,"usar_flecha_seleccion":"usar_flecha_seleccion"}},[_c('template',{slot:"flecha-seleccion"},[_vm._t("contenido-flecha")],2)],2)}),(_vm.mostrar_boton_responder)?_c('div',{staticClass:"cont-boton-responder",on:{"click":_vm.responder_pregunta}},[_vm._t("boton_responder",[_c('button',{attrs:{"type":"button"}},[_vm._v("\n                    Contestar\n                ")])])],2):_vm._e()],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"69780edd-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/Pregunta.vue?vue&type=template&id=28eee618&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta",attrs:{"data-total-opciones":_vm.opciones.length}},[_c('div',{staticClass:"pregunta-titulo"},[_vm._t("titulo",[_vm._v("\n            "+_vm._s(_vm.pregunta)+"\n        ")])],2),_vm._l((_vm.opciones),function(item,index){return _c('pregunta-respuesta-opcion',{key:item,attrs:{"padre_id":_vm.id,"indice":index,"texto":item.texto,"fondo":_vm.opciones_respuesta_tienen_fondo,"correcto":item.correcta,"usar_flecha_seleccion":"usar_flecha_seleccion"}},[_c('template',{slot:"flecha-seleccion"},[_vm._t("contenido-flecha")],2)],2)}),(_vm.mostrar_boton_responder)?_c('div',{staticClass:"cont-boton-responder",on:{"click":_vm.responder_pregunta}},[_vm._t("boton_responder",[_c('button',{attrs:{"type":"button"}},[_vm._v("\n                    Contestar\n                ")])])],2):_vm._e()],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue?vue&type=template&id=ca21b260&scoped=true&
+// CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue?vue&type=template&id=28eee618&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.to-string.js
 var es6_regexp_to_string = __webpack_require__("6b54");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2258c207-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=6b95b933&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"69780edd-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=6b95b933&
 var PreguntaRespuestaOpcionvue_type_template_id_6b95b933_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta-respuesta-opcion",class:{
                 'opcion-seleccionada': _vm.seleccionado,
                 'opcion-correcta': _vm.padre_pregunta_fue_respondida && _vm.correcto,
@@ -840,21 +840,6 @@ var component = normalizeComponent(
 /**
  * 
  * Componente que representa una pregunta 
- *  ### Clases CSS disponbles
- * 
- *  #### pregunta
- *  -  `.pregunta` Clase para el contenedor de la pregunta. Tambien contiene a las opciones de respuesta.
- *  -  `.pregunta-titulo` Clase para el texto de la pregunta
- *  -  `.cont-boton-responder` Clase para el contenedor del boton de responder
- *  #### opcion de respuesta
- *  -  `.pregunta-respuesta-opcion` Clase para el contenedor de la la opcion
- *      -  `.pregunta-respuesta-opcion-fondo` Clase para el fondo de la opcion de respuesta. 
- *          Depende del prop `fondo`
- *      -   `.pregunta-respuesta-opcion-texto` Etiqueta `<label>` que contiene el texto de la opcion de respuesta.
- *  -  `.opcion-seleccionada` Clase para la opcion seleccionada
- *  -  `.opcion-seleccionada-flecha` Clase para la flecha abajo de la opcion seleccionada.
- *  -  `.opcion-correcta` Clase para la opcion correcta
- *  -  `.opcion-incorrecta` Clase para la opcion incorrecta
  */
 
 /* harmony default export */ var Preguntavue_type_script_lang_js_ = ({
@@ -882,20 +867,35 @@ var component = normalizeComponent(
     },
 
     /** Mostrar el div para fondo de opciones de respuesta */
-    opciones_respuesta_tienen_fondo: false,
+    opciones_respuesta_tienen_fondo: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
 
     /** 
      * El nombre o id de la pregunta. Ayuda a identificar la opcion seleccionada con su pregunta padre. Obligatorio.
      */
-    id: String,
+    id: {
+      type: String,
+      required: true,
+      default: "null_question"
+    },
 
     /** 
      * Una funcion que se llama cuando se hizo clic en el botón de responder.
      * La idea es usarla para llamar a otra pregunta o esconder la actual.
      */
     finalizar_pregunta: Function,
-    usar_flecha_seleccion: false,
-    html_flecha: null
+
+    /**
+     * Mostrar `.opcion-seleccionada-flecha` de las opciones de respuesta.
+     */
+    usar_flecha_seleccion: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
   },
   data: function data() {
     return {
@@ -932,9 +932,9 @@ var component = normalizeComponent(
   },
   methods: {
     /**
-     * Califica que se selecciono una opción de respuesta y es la correcta
+     * Califica que opción de respuesta se selecciono y si es la correcta
      * Emite el evento `pregunta_respondida`.
-     * Si el prop `finalizar_pregunta` es una funcion, la llama.
+     * Si el prop `finalizar_pregunta` es una función, la llama.
      */
     responder_pregunta: function responder_pregunta() {
       if (this.pregunta_fue_respondida) {
@@ -960,18 +960,40 @@ var component = normalizeComponent(
   mounted: function mounted() {
     var _this = this;
 
-    //this.$on('opcion_seleccionada', indice => {
+    var i_am_a_dummy_for_comments = false;
     this.$root.$on('opcion_seleccionada', function (id_padre_opcion, indice) {
       if (_this.id == id_padre_opcion) {
         _this.opcion_seleccionada = indice;
       }
     });
+    /* Necesito este if(false)para que pueda hacer un comentario para el evento */
+
+    if (i_am_a_dummy_for_comments) {
+      /**
+       * Evento para limpiar el estado de la pregunta, conserva 
+       * el texto de la pregunta y sus opciones de respuesta.
+       * Acepta un array con el id de esta pregunta o el id de esta pregunta
+       * Se debe emitir este evento y el componente Pregunta lo atrapa.
+       * `$vm.$root.$emit("pregunta_reiniciar", id_pregunta);`
+       */
+      this.$emit("pregunta_reiniciar", this.id);
+    }
+    /* Necesito este if(false)para que pueda hacer un comentario para el evento */
+
+
+    if (i_am_a_dummy_for_comments) {
+      /**
+       * Evento emitido por el metodo `responder_pregunta`. Indica cual pregunta 
+       * ya fue respondida.
+       */
+      this.$emit("pregunta_respondida", this.id);
+    }
     /**
      * Evento para limpiar el estado de la pregunta, conserva 
      * el texto de la pregunta y sus opciones de respuesta.
      * Acepta un array con el id de esta pregunta o el id de esta pregunta
-     * 
      */
+
 
     this.$root.$on('pregunta_reiniciar', function (id) {
       var reiniciar = false;
@@ -986,8 +1008,46 @@ var component = normalizeComponent(
         _this.pregunta_fue_respondida = false;
       }
     });
+    /**
+     * @vuese
+     * Evento para forzar la selección de opcion de respuesta
+     * Llama al evento `responder_pregunta` para que califique si la opción es correcta
+     * @param `pregunta_id` el identificador de la pregunta
+     * @param `indice_opcion_respuesta` el indice de la opcion seleccionada. 
+     *         Si es nulo, no se selecciona ninguna opcion y se considera como incorrecta.
+     */
+
+    this.$root.$on('pregunta_responder', function (pregunta_id, indice_opcion_respuesta) {
+      if (_this.id !== pregunta_id) {
+        return;
+      }
+
+      if (indice_opcion_respuesta !== null) {
+        _this.$root.$emit("opcion_seleccionada", pregunta_id, indice_opcion_respuesta);
+      }
+
+      _this.responder_pregunta();
+    });
   }
 });
+/**
+ *  @vuese
+ *  ### Clases CSS disponbles
+ * 
+ *  #### pregunta
+ *  -  `.pregunta` Clase para el contenedor de la pregunta. Tambien contiene a las opciones de respuesta.
+ *  -  `.pregunta-titulo` Clase para el texto de la pregunta
+ *  -  `.cont-boton-responder` Clase para el contenedor del boton de responder
+ *  #### opcion de respuesta
+ *  -  `.pregunta-respuesta-opcion` Clase para el contenedor de la la opcion
+ *      -  `.pregunta-respuesta-opcion-fondo` Clase para el fondo de la opcion de respuesta. 
+ *          Depende del prop `fondo`
+ *      -   `.pregunta-respuesta-opcion-texto` Etiqueta `<label>` que contiene el texto de la opcion de respuesta.
+ *  -  `.opcion-seleccionada` Clase para la opcion seleccionada
+ *  -  `.opcion-seleccionada-flecha` Clase para la flecha abajo de la opcion seleccionada.
+ *  -  `.opcion-correcta` Clase para la opcion correcta
+ *  -  `.opcion-incorrecta` Clase para la opcion incorrecta
+ */
 // CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue?vue&type=script&lang=js&
  /* harmony default export */ var preguntas_Preguntavue_type_script_lang_js_ = (Preguntavue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue
@@ -1004,7 +1064,7 @@ var Pregunta_component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "ca21b260",
+  "28eee618",
   null
   
 )

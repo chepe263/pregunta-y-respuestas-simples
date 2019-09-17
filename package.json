@@ -1,28 +1,34 @@
 {
   "name": "@chepe263/vue-pregunta-y-respuestas-simples",
   "description": "Componente Vue para mostrar una pregunta y sus opciones de respuesta.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
-  "author":  "Capitan Nemo",
+  "author": "Capitan Nemo",
   "homepage": "https://github.com/chepe263/vue-pregunta-y-respuestas-simples",
   "repository": {
     "type": "git",
     "url": "https://github.com/chepe263/vue-pregunta-y-respuestas-simples.git"
   },
   "license": "MIT",
-  "main" : "dist/preguntas.umd.js",
-  "unpkg" : "dist/preguntas.umd.min.js",
+  "main": "dist/preguntas.umd.js",
+  "unpkg": "dist/preguntas.umd.min.js",
   "browser": {
     "./sfc": "src/preguntas/Pregunta.vue"
   },
-  "files": ["dist","src/components/preguntas"],
+  "files": [
+    "dist",
+    "src/components/preguntas"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build-lib": "vue-cli-service build --target lib --name preguntas ./src/components/preguntas/Pregunta.vue",
     "build:npm": "vue-cli-service build --target lib --name preguntas ./src/components/preguntas/Pregunta.vue",
-    "docs": "npx vuedoc.md \"./src/components/preguntas/Pregunta.vue\" \"./src/components/preguntas/PreguntaRespuestaOpcion.vue\"  --output ./docs",
-    "lint": "vue-cli-service lint"
+    "docs": "vuese gen && vuese serve",
+    "docs.vuese": "vuese gen && vuese serve",
+    "docs.vuedoc": "npx vuedoc.md \"./src/components/preguntas/Pregunta.vue\" \"./src/components/preguntas/PreguntaRespuestaOpcion.vue\"  --output ./docs",
+    "lint": "vue-cli-service lint",
+    "lint-fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "core-js": "^2.6.5",

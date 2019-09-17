@@ -35,7 +35,7 @@ export default {
     Pregunta
   },
   methods: {
-    resultado: function(res, pre_id){
+    resultado: function(res){
       if(res){
         this.correctas++;
       } else {

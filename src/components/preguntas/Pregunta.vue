@@ -6,7 +6,7 @@
             {{ pregunta }}
         </slot>
       </div>
-      <pregunta-respuesta-opcion v-for="item, index in opciones" 
+      <pregunta-respuesta-opcion v-for="(item, index) in opciones" :key="item"
         :padre_id="id"
         :indice="index" 
         :texto="item.texto" 
@@ -36,22 +36,9 @@ import PreguntaRespuestaOpcion from './PreguntaRespuestaOpcion.vue';
 /**
  * 
  * Componente que representa una pregunta 
- *  ### Clases CSS disponbles
- * 
- *  #### pregunta
- *  -  `.pregunta` Clase para el contenedor de la pregunta. Tambien contiene a las opciones de respuesta.
- *  -  `.pregunta-titulo` Clase para el texto de la pregunta
- *  -  `.cont-boton-responder` Clase para el contenedor del boton de responder
- *  #### opcion de respuesta
- *  -  `.pregunta-respuesta-opcion` Clase para el contenedor de la la opcion
- *      -  `.pregunta-respuesta-opcion-fondo` Clase para el fondo de la opcion de respuesta. 
- *          Depende del prop `fondo`
- *      -   `.pregunta-respuesta-opcion-texto` Etiqueta `<label>` que contiene el texto de la opcion de respuesta.
- *  -  `.opcion-seleccionada` Clase para la opcion seleccionada
- *  -  `.opcion-seleccionada-flecha` Clase para la flecha abajo de la opcion seleccionada.
- *  -  `.opcion-correcta` Clase para la opcion correcta
- *  -  `.opcion-incorrecta` Clase para la opcion incorrecta
  */
+ 
+
 export default {
   name: 'Pregunta',
   components: {PreguntaRespuestaOpcion,},
@@ -73,12 +60,21 @@ export default {
         required: true
     },
     /** Mostrar el div para fondo de opciones de respuesta */
-    opciones_respuesta_tienen_fondo: false,
+    opciones_respuesta_tienen_fondo: {
+		type: Boolean,
+		required: false,
+		default: false,
+	},
 
     /** 
      * El nombre o id de la pregunta. Ayuda a identificar la opcion seleccionada con su pregunta padre. Obligatorio.
      */
-    id: String,
+    id: {
+		type: String,
+		required: true,
+		default: "null_question",
+	
+	},
     /** 
      * Una funcion que se llama cuando se hizo clic en el botón de responder.
      * La idea es usarla para llamar a otra pregunta o esconder la actual.
@@ -87,7 +83,11 @@ export default {
 	/**
 	 * Mostrar `.opcion-seleccionada-flecha` de las opciones de respuesta.
 	 */
-    usar_flecha_seleccion: false,
+    usar_flecha_seleccion: {
+		type: Boolean,
+		required: false,
+		default: false,
+	},
   },
   data() {
       return {
@@ -121,9 +121,9 @@ export default {
   },
   methods:{
     /**
-     * Califica que se selecciono una opción de respuesta y es la correcta
+     * Califica que opción de respuesta se selecciono y si es la correcta
      * Emite el evento `pregunta_respondida`.
-     * Si el prop `finalizar_pregunta` es una funcion, la llama.
+     * Si el prop `finalizar_pregunta` es una función, la llama.
      */
     responder_pregunta: function(){
         if(this.pregunta_fue_respondida){
@@ -134,7 +134,7 @@ export default {
             resultado = this.opciones[this.opcion_seleccionada].correcta == true;
         }
         this.opcion_seleccionada == null;
-        this.pregunta_fue_respondida = true;
+        this.pregunta_fue_respondida = true;		
         this.$emit("resultado_pregunta", resultado, this.id);
         this.$root.$emit("pregunta_respondida", this.id);
         if(this.finalizar_pregunta !== undefined){
@@ -143,18 +143,43 @@ export default {
     }
   },
     mounted() {
-        //this.$on('opcion_seleccionada', indice => {
+	const i_am_a_dummy_for_comments = false;
         this.$root.$on('opcion_seleccionada', (id_padre_opcion, indice) => {
             if(this.id == id_padre_opcion){
                 this.opcion_seleccionada = indice;
             }   
         });
-        /**
-         * Evento para limpiar el estado de la pregunta, conserva 
-         * el texto de la pregunta y sus opciones de respuesta.
-         * Acepta un array con el id de esta pregunta o el id de esta pregunta
-         * 
-         */
+		
+		
+		
+		/* Necesito este if(false)para que pueda hacer un comentario para el evento */
+        if(i_am_a_dummy_for_comments){
+			/**
+			 * Evento para limpiar el estado de la pregunta, conserva 
+			 * el texto de la pregunta y sus opciones de respuesta.
+			 * Acepta un array con el id de esta pregunta o el id de esta pregunta
+			 * Se debe emitir este evento y el componente Pregunta lo atrapa.
+			 * `$vm.$root.$emit("pregunta_reiniciar", id_pregunta);`
+			 */
+			this.$emit("pregunta_reiniciar", this.id);
+		}
+		
+		
+		/* Necesito este if(false)para que pueda hacer un comentario para el evento */
+		if(i_am_a_dummy_for_comments){
+			/**
+			 * Evento emitido por el metodo `responder_pregunta`. Indica cual pregunta 
+			 * ya fue respondida.
+			 */
+			this.$emit("pregunta_respondida", this.id);
+		}
+		
+		
+		/**
+		 * Evento para limpiar el estado de la pregunta, conserva 
+		 * el texto de la pregunta y sus opciones de respuesta.
+		 * Acepta un array con el id de esta pregunta o el id de esta pregunta
+		 */
         this.$root.$on('pregunta_reiniciar', (id) => {
             let reiniciar = false;
             if(Object.prototype.toString.call(id) == "[object Array]"){
@@ -166,11 +191,46 @@ export default {
                 this.pregunta_fue_respondida = false;
             }
         });
+		/**
+		 * @vuese
+		 * Evento para forzar la selección de opcion de respuesta
+		 * Llama al evento `responder_pregunta` para que califique si la opción es correcta
+		 * @param `pregunta_id` el identificador de la pregunta
+		 * @param `indice_opcion_respuesta` el indice de la opcion seleccionada. 
+		 *         Si es nulo, no se selecciona ninguna opcion y se considera como incorrecta.
+		 */
+		this.$root.$on('pregunta_responder', (pregunta_id, indice_opcion_respuesta) => {
+			if(this.id !== pregunta_id){
+				return;
+			}
+			if(indice_opcion_respuesta !== null){
+				this.$root.$emit("opcion_seleccionada", pregunta_id, indice_opcion_respuesta);
+			}
+			this.responder_pregunta();
+			
+		});
     }
 }
+/**
+ *  @vuese
+ *  ### Clases CSS disponbles
+ * 
+ *  #### pregunta
+ *  -  `.pregunta` Clase para el contenedor de la pregunta. Tambien contiene a las opciones de respuesta.
+ *  -  `.pregunta-titulo` Clase para el texto de la pregunta
+ *  -  `.cont-boton-responder` Clase para el contenedor del boton de responder
+ *  #### opcion de respuesta
+ *  -  `.pregunta-respuesta-opcion` Clase para el contenedor de la la opcion
+ *      -  `.pregunta-respuesta-opcion-fondo` Clase para el fondo de la opcion de respuesta. 
+ *          Depende del prop `fondo`
+ *      -   `.pregunta-respuesta-opcion-texto` Etiqueta `<label>` que contiene el texto de la opcion de respuesta.
+ *  -  `.opcion-seleccionada` Clase para la opcion seleccionada
+ *  -  `.opcion-seleccionada-flecha` Clase para la flecha abajo de la opcion seleccionada.
+ *  -  `.opcion-correcta` Clase para la opcion correcta
+ *  -  `.opcion-incorrecta` Clase para la opcion incorrecta
+ */
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
 </style>
