@@ -6,7 +6,7 @@
             {{ pregunta }}
         </slot>
       </div>
-      <pregunta-respuesta-opcion v-for="(item, index) in opciones" :key="item"
+      <pregunta-respuesta-opcion v-for="(item, index) in opciones" :key="index"
         :padre_id="id"
         :indice="index" 
         :texto="item.texto" 

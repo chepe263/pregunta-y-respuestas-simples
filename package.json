@@ -2,7 +2,6 @@
   "name": "@chepe263/vue-pregunta-y-respuestas-simples",
   "description": "Componente Vue para mostrar una pregunta y sus opciones de respuesta.",
   "version": "0.1.6",
-  "private": true,
   "author": "Capitan Nemo",
   "homepage": "https://github.com/chepe263/vue-pregunta-y-respuestas-simples",
   "repository": {

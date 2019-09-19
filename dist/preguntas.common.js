@@ -498,12 +498,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"69780edd-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/Pregunta.vue?vue&type=template&id=28eee618&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta",attrs:{"data-total-opciones":_vm.opciones.length}},[_c('div',{staticClass:"pregunta-titulo"},[_vm._t("titulo",[_vm._v("\n            "+_vm._s(_vm.pregunta)+"\n        ")])],2),_vm._l((_vm.opciones),function(item,index){return _c('pregunta-respuesta-opcion',{key:item,attrs:{"padre_id":_vm.id,"indice":index,"texto":item.texto,"fondo":_vm.opciones_respuesta_tienen_fondo,"correcto":item.correcta,"usar_flecha_seleccion":"usar_flecha_seleccion"}},[_c('template',{slot:"flecha-seleccion"},[_vm._t("contenido-flecha")],2)],2)}),(_vm.mostrar_boton_responder)?_c('div',{staticClass:"cont-boton-responder",on:{"click":_vm.responder_pregunta}},[_vm._t("boton_responder",[_c('button',{attrs:{"type":"button"}},[_vm._v("\n                    Contestar\n                ")])])],2):_vm._e()],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"69780edd-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/Pregunta.vue?vue&type=template&id=11f3126b&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta",attrs:{"data-total-opciones":_vm.opciones.length}},[_c('div',{staticClass:"pregunta-titulo"},[_vm._t("titulo",[_vm._v("\n            "+_vm._s(_vm.pregunta)+"\n        ")])],2),_vm._l((_vm.opciones),function(item,index){return _c('pregunta-respuesta-opcion',{key:index,attrs:{"padre_id":_vm.id,"indice":index,"texto":item.texto,"fondo":_vm.opciones_respuesta_tienen_fondo,"correcto":item.correcta,"usar_flecha_seleccion":"usar_flecha_seleccion"}},[_c('template',{slot:"flecha-seleccion"},[_vm._t("contenido-flecha")],2)],2)}),(_vm.mostrar_boton_responder)?_c('div',{staticClass:"cont-boton-responder",on:{"click":_vm.responder_pregunta}},[_vm._t("boton_responder",[_c('button',{attrs:{"type":"button"}},[_vm._v("\n                    Contestar\n                ")])])],2):_vm._e()],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue?vue&type=template&id=28eee618&scoped=true&
+// CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue?vue&type=template&id=11f3126b&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.to-string.js
 var es6_regexp_to_string = __webpack_require__("6b54");
@@ -1064,7 +1064,7 @@ var Pregunta_component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "28eee618",
+  "11f3126b",
   null
   
 )
