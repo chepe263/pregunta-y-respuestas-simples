@@ -498,29 +498,44 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"69780edd-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/Pregunta.vue?vue&type=template&id=11f3126b&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta",attrs:{"data-total-opciones":_vm.opciones.length}},[_c('div',{staticClass:"pregunta-titulo"},[_vm._t("titulo",[_vm._v("\n            "+_vm._s(_vm.pregunta)+"\n        ")])],2),_vm._l((_vm.opciones),function(item,index){return _c('pregunta-respuesta-opcion',{key:index,attrs:{"padre_id":_vm.id,"indice":index,"texto":item.texto,"fondo":_vm.opciones_respuesta_tienen_fondo,"correcto":item.correcta,"usar_flecha_seleccion":"usar_flecha_seleccion"}},[_c('template',{slot:"flecha-seleccion"},[_vm._t("contenido-flecha")],2)],2)}),(_vm.mostrar_boton_responder)?_c('div',{staticClass:"cont-boton-responder",on:{"click":_vm.responder_pregunta}},[_vm._t("boton_responder",[_c('button',{attrs:{"type":"button"}},[_vm._v("\n                    Contestar\n                ")])])],2):_vm._e()],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"26b4271e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/Pregunta.vue?vue&type=template&id=7ff4373e&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta",attrs:{"data-total-opciones":_vm.opciones.length}},[_c('div',{staticClass:"pregunta-titulo"},[_vm._t("titulo",[_vm._v("\n            "+_vm._s(_vm.pregunta)+"\n        ")])],2),_vm._l((_vm.opciones),function(item,index){return _c('pregunta-respuesta-opcion',{key:index,attrs:{"padre_id":_vm.id,"indice":index,"texto":item.texto,"fondo":_vm.opciones_respuesta_tienen_fondo,"correcto":item.correcta,"mostrar_radio_estado":_vm.mostrar_radio_estado,"usar_flecha_seleccion":_vm.usar_flecha_seleccion}},[_c('template',{slot:"radio-apagado-contenido"},[_vm._t("estado-radio-apagado")],2),_c('template',{slot:"radio-encendido-contenido"},[_vm._t("estado-radio-encendido")],2),_c('template',{slot:"radio-correcto-contenido"},[_vm._t("estado-radio-correcto")],2),_c('template',{slot:"radio-incorrecto-contenido"},[_vm._t("estado-radio-incorrecto")],2),_c('template',{slot:"flecha-seleccion"},[_vm._t("contenido-flecha")],2)],2)}),(_vm.mostrar_boton_responder)?_c('div',{staticClass:"cont-boton-responder",on:{"click":_vm.responder_pregunta}},[_vm._t("boton_responder",[_c('button',{attrs:{"type":"button"}},[_vm._v("\n                    Contestar\n                ")])])],2):_vm._e()],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue?vue&type=template&id=11f3126b&scoped=true&
+// CONCATENATED MODULE: ./src/components/preguntas/Pregunta.vue?vue&type=template&id=7ff4373e&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.to-string.js
 var es6_regexp_to_string = __webpack_require__("6b54");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"69780edd-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=6b95b933&
-var PreguntaRespuestaOpcionvue_type_template_id_6b95b933_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta-respuesta-opcion",class:{
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"26b4271e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=9cbb1c88&
+var PreguntaRespuestaOpcionvue_type_template_id_9cbb1c88_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"pregunta-respuesta-opcion",class:{
                 'opcion-seleccionada': _vm.seleccionado,
                 'opcion-correcta': _vm.padre_pregunta_fue_respondida && _vm.correcto,
                 'opcion-incorrecta': _vm.padre_pregunta_fue_respondida && !_vm.correcto && _vm.seleccionado,
-                },on:{"click":_vm.opcion_seleccionada}},[(_vm.fondo == true)?_c('div',{staticClass:"pregunta-respuesta-opcion-fondo"}):_vm._e(),_c('label',{staticClass:"pregunta-respuesta-opcion-texto"},[_c('input',{attrs:{"type":"radio","name":("opcion_respuesta[" + _vm.padre_id + "][]"),"disabled":_vm.padre_pregunta_fue_respondida,"selected":_vm.seleccionado}}),_vm._t("default",[_vm._v("\n                "+_vm._s(_vm.texto)+"\n            ")])],2),(_vm.usar_flecha_seleccion && _vm.seleccionado)?_c('div',{staticClass:"opcion-seleccionada-flecha"},[_vm._t("flecha-seleccion")],2):_vm._e()])}
-var PreguntaRespuestaOpcionvue_type_template_id_6b95b933_staticRenderFns = []
+                },on:{"click":_vm.opcion_seleccionada}},[(_vm.fondo == true)?_c('div',{staticClass:"pregunta-respuesta-opcion-fondo"}):_vm._e(),(_vm.mostrar_radio_estado)?_c('div',{staticClass:"pregunta-respuesta-opcion-radio-estado"},[(_vm.evaluar_radio_apagado)?_c('div',{staticClass:"pregunta-respuesta-opcion-radio pregunta-respuesta-opcion-radio-apagado"},[_vm._t("radio-apagado-contenido")],2):_vm._e(),(_vm.seleccionado && !_vm.padre_pregunta_fue_respondida)?_c('div',{staticClass:"pregunta-respuesta-opcion-radio pregunta-respuesta-opcion-radio-encendido"},[_vm._t("radio-encendido-contenido")],2):_vm._e(),(_vm.evaluar_radio_correcto)?_c('div',{staticClass:"pregunta-respuesta-opcion-radio pregunta-respuesta-opcion-radio-correcto"},[_vm._t("radio-correcto-contenido")],2):_vm._e(),(_vm.evaluar_radio_incorrecto)?_c('div',{staticClass:"pregunta-respuesta-opcion-radio pregunta-respuesta-opcion-radio-incorrecto"},[_vm._t("radio-incorrecto-contenido")],2):_vm._e()]):_vm._e(),_c('label',{staticClass:"pregunta-respuesta-opcion-texto"},[_c('input',{attrs:{"type":"radio","name":("opcion_respuesta[" + _vm.padre_id + "][]"),"disabled":_vm.padre_pregunta_fue_respondida,"selected":_vm.seleccionado}}),_vm._t("default",[_vm._v("\n                "+_vm._s(_vm.texto)+"\n            ")])],2),(_vm.usar_flecha_seleccion && _vm.seleccionado)?_c('div',{staticClass:"opcion-seleccionada-flecha"},[_vm._t("flecha-seleccion")],2):_vm._e()])}
+var PreguntaRespuestaOpcionvue_type_template_id_9cbb1c88_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=6b95b933&
+// CONCATENATED MODULE: ./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=template&id=9cbb1c88&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/PreguntaRespuestaOpcion.vue?vue&type=script&lang=js&
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -590,6 +605,14 @@ var PreguntaRespuestaOpcionvue_type_template_id_6b95b933_staticRenderFns = []
       default: true
     },
 
+    /**
+     * Mostrar o no un div que sirve para mostrar el estado actual del radio button
+     */
+    mostrar_radio_estado: {
+      type: Boolean,
+      default: false
+    },
+
     /** @type {boolean} Si la opcion de respuesta es correcta o no.*/
     correcto: {
       type: Boolean,
@@ -628,6 +651,43 @@ var PreguntaRespuestaOpcionvue_type_template_id_6b95b933_staticRenderFns = []
        */
       padre_pregunta_fue_respondida: false
     };
+  },
+  computed: {
+    evaluar_radio_apagado: function evaluar_radio_apagado() {
+      if (!this.mostrar_radio_estado) {
+        return false;
+      }
+
+      if (this.padre_pregunta_fue_respondida) {
+        if (this.correcto) {
+          return false;
+        } else if (!this.correcto && this.seleccionado) {
+          return false;
+        } else {
+          return true;
+        }
+      } else {
+        if (!this.seleccionado) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    },
+    evaluar_radio_correcto: function evaluar_radio_correcto() {
+      if (!this.mostrar_radio_estado) {
+        return false;
+      }
+
+      return this.padre_pregunta_fue_respondida && this.correcto;
+    },
+    evaluar_radio_incorrecto: function evaluar_radio_incorrecto() {
+      if (!this.mostrar_radio_estado) {
+        return false;
+      }
+
+      return this.padre_pregunta_fue_respondida && !this.correcto && this.seleccionado;
+    }
   },
   methods: {
     /** Emite el evento `opcion_seleccionada` si la opcion no fue respondia ya.
@@ -791,8 +851,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   preguntas_PreguntaRespuestaOpcionvue_type_script_lang_js_,
-  PreguntaRespuestaOpcionvue_type_template_id_6b95b933_render,
-  PreguntaRespuestaOpcionvue_type_template_id_6b95b933_staticRenderFns,
+  PreguntaRespuestaOpcionvue_type_template_id_9cbb1c88_render,
+  PreguntaRespuestaOpcionvue_type_template_id_9cbb1c88_staticRenderFns,
   false,
   null,
   null,
@@ -803,6 +863,19 @@ var component = normalizeComponent(
 /* harmony default export */ var PreguntaRespuestaOpcion = (component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/preguntas/Pregunta.vue?vue&type=script&lang=js&
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -894,6 +967,14 @@ var component = normalizeComponent(
     usar_flecha_seleccion: {
       type: Boolean,
       required: false,
+      default: false
+    },
+
+    /**
+     * Mostrar o no un div que sirve para mostrar el estado actual del radio button
+     */
+    mostrar_radio_estado: {
+      type: Boolean,
       default: false
     }
   },
@@ -1064,7 +1145,7 @@ var Pregunta_component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "11f3126b",
+  "7ff4373e",
   null
   
 )

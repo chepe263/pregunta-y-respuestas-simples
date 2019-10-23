@@ -12,6 +12,21 @@
                 }"
 		>
         <div class="pregunta-respuesta-opcion-fondo" v-if="fondo == true"></div>
+        <div class="pregunta-respuesta-opcion-radio-estado" v-if="mostrar_radio_estado" >
+			<div class="pregunta-respuesta-opcion-radio pregunta-respuesta-opcion-radio-apagado" v-if="evaluar_radio_apagado" >
+				<slot name="radio-apagado-contenido"></slot>
+			</div>
+			<div class="pregunta-respuesta-opcion-radio pregunta-respuesta-opcion-radio-encendido" v-if="seleccionado && !padre_pregunta_fue_respondida">
+				<slot name="radio-encendido-contenido"></slot>
+			</div>
+			<div class="pregunta-respuesta-opcion-radio pregunta-respuesta-opcion-radio-correcto" v-if="evaluar_radio_correcto">
+				<slot name="radio-correcto-contenido"></slot>
+			</div>
+			<div class="pregunta-respuesta-opcion-radio pregunta-respuesta-opcion-radio-incorrecto" v-if="evaluar_radio_incorrecto">
+				<slot name="radio-incorrecto-contenido"></slot> 
+			</div>
+		</div>
+		
         <label class="pregunta-respuesta-opcion-texto" 
             
             
@@ -64,6 +79,13 @@ export default {
             type: Boolean,
             default: true
         },
+        /**
+         * Mostrar o no un div que sirve para mostrar el estado actual del radio button
+         */
+		mostrar_radio_estado: {
+			type: Boolean,
+			default: false
+		},
         /** @type {boolean} Si la opcion de respuesta es correcta o no.*/
         correcto: {
             type:Boolean,
@@ -101,6 +123,40 @@ export default {
             padre_pregunta_fue_respondida: false,
         }
     },
+	computed: {
+		evaluar_radio_apagado: function(){
+			if(!this.mostrar_radio_estado){
+				return false;
+			}
+			if(this.padre_pregunta_fue_respondida){                
+				if(this.correcto){
+					return false
+				} else if(!this.correcto && this.seleccionado){
+					return false;
+				} else {
+					return true;
+				}
+			} else {
+				if(!this.seleccionado){
+					return true;
+				} else {
+					return false;
+				}
+			}
+		},
+		evaluar_radio_correcto: function(){
+			if(!this.mostrar_radio_estado){
+				return false;
+			}
+			return this.padre_pregunta_fue_respondida && this.correcto;
+		}, 
+		evaluar_radio_incorrecto: function(){
+			if(!this.mostrar_radio_estado){
+				return false;
+			}
+			return this.padre_pregunta_fue_respondida && !this.correcto && this.seleccionado
+		},
+	},
     methods: {
         /** Emite el evento `opcion_seleccionada` si la opcion no fue respondia ya.
          * @param padre_id el id de la pregunta que corresponde esta opcion de respuesta

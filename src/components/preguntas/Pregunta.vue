@@ -11,14 +11,27 @@
         :indice="index" 
         :texto="item.texto" 
         :fondo="opciones_respuesta_tienen_fondo" 
-        :correcto="item.correcta"         
-        usar_flecha_seleccion="usar_flecha_seleccion"         
+        :correcto="item.correcta"
+        :mostrar_radio_estado="mostrar_radio_estado"
+        :usar_flecha_seleccion="usar_flecha_seleccion" 
         >
-			<template slot="flecha-seleccion">
-				<!-- Slot para mostrar una flecha abajo de la opcion seleccionada -->
-				<slot name="contenido-flecha">
-				</slot>
+			<template slot="radio-apagado-contenido" >
+				<slot name="estado-radio-apagado"></slot>
 			</template>
+			<template slot="radio-encendido-contenido" >
+				<slot name="estado-radio-encendido"></slot>
+			</template>
+			<template slot="radio-correcto-contenido" >
+				<slot name="estado-radio-correcto"></slot>
+			</template>
+			<template slot="radio-incorrecto-contenido" >
+				<slot name="estado-radio-incorrecto"></slot>
+			</template>
+			<template slot="flecha-seleccion" >
+				<!-- Slot para mostrar una flecha abajo de la opcion seleccionada -->
+				<slot name="contenido-flecha"></slot>
+			</template>
+
 		</pregunta-respuesta-opcion>
         <div @click="responder_pregunta" v-if="mostrar_boton_responder" class="cont-boton-responder">
             <!-- Usar el slot #boton_responder para mostrar un boton que llama a la funcion de responder la pregunta. -->
@@ -87,6 +100,13 @@ export default {
 		type: Boolean,
 		required: false,
 		default: false,
+	},
+	/**
+	 * Mostrar o no un div que sirve para mostrar el estado actual del radio button
+	 */
+	mostrar_radio_estado: {
+		type: Boolean,
+		default: false
 	},
   },
   data() {
