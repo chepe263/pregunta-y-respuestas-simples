@@ -1,5 +1,5 @@
 
-# vue-simple-question-answers
+# vue-pregunta-y-respuestas-simples
 
 > Componente Vue para mostrar una pregunta y sus opciones de respuesta.
 
